@@ -1,0 +1,30 @@
+<!-- var arr = [1, 4, 2, 6, 8, 5, 1, 9, 53, 12, 8]; 
+ var max = arr[0]; 
+ for (var i = 0; i < arr.length; i++) {
+ if(arr[i] > max)
+ { 
+   max = arr[i];
+ } 
+  }
+console.log(max); -->
+<!DOCTYPE html>
+<html lang="en">
+	<head> </head>
+	<body>
+		<script>
+			var n = prompt('Enter number of elements');
+			var arr = [n];
+			for (var i = 0; i < n; i++) {
+				arr[i] = prompt('Enter ' + (i + 1) + ' element of array ');
+			}
+
+			var max = arr[0];
+			for (var i = 0; i < arr.length; i++) {
+				if (arr[i] > max) {
+					max = arr[i];
+				}
+			}
+			document.write('Maximum number is ' + max);
+		</script>
+	</body>
+</html>
