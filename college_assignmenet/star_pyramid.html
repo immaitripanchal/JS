@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head> </head>
+	<body>
+		<script>
+			let rows = prompt('Enter number of rows :');
+			for (let i = 0; i < rows; i++) {
+				let star = ' ';
+				for (let k = 0; k < rows - i - 1; k++) {
+					star += '&nbsp;&nbsp;&nbsp;';
+				}
+				for (let j = 0; j <= i; j++) {
+					star += '*&nbsp;&nbsp;&nbsp;';
+				}
+				document.write(star + '<br>');
+			}
+		</script>
+	</body>
+</html>

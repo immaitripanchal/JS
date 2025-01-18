@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head> </head>
+	<body>
+		<script>
+			// gcd and lcm
+			let number = prompt('Enter first number :');
+			let number1 = prompt('Enter second  number :');
+			let gcd, lcm;
+			if (number == 0 || number1 == 0) {
+				document.write('Enter valid number :');
+			}
+			for (let i = 1; i <= number && i <= number1; i++) {
+				if (number % i == 0 && number1 % i == 0) {
+					gcd = i;
+				}
+			}
+			lcm = (number * number1) / gcd;
+			document.write('GCD of ' + number + ' and ' + number1 + ' is ' + gcd);
+			document.write('<br>');
+			document.write('LCM of ' + number + ' and ' + number1 + ' is ' + lcm);
+		</script>
+	</body>
+</html>
