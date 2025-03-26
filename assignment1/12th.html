@@ -5,5 +5,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 	</head>
-	<body></body>
+	<body>
+		<center>
+			<h1>Range validation :</h1>
+			<label for="minimum">Minimum :</label>
+			<input type="range" id="minimum" min="0" max="1000" oninput="validate()" />
+			<br /><br />
+			<label for="maximum">Maximum :</label>
+			<input type="range" id="maximum" min="0" max="1000" oninput="validate()" />
+			<br /><br />
+			<span style="color: red" id="Error"></span>
+		</center>
+	</body>
+	<script>
+		function validate() {
+			let minimum = parseInt(document.getElementById('minimum').value);
+			let maximum = parseInt(document.getElementById('maximum').value);
+
+			if (minimum == 0 || maximum == 0) {
+				document.getElementById('Error').innerHTML = `price must be greater than 0`;
+			} else if (minimum >= maximum) {
+				document.getElementById('Error').innerHTML = `Minimum price cann't be greater than maximum`;
+			} else {
+				document.getElementById('Error').innerHTML = `Minimum : ${minimum}  Maximum : ${maximum}`;
+			}
+		}
+	</script>
 </html>
