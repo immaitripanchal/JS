@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Click the button to find Maximum or Maximum :</h1>
+		<button onclick="minfun()"><h1>Minimum</h1></button>
+		<button onclick="maxfun()"><h1>Maximum</h1></button>
+		<script>
+			function minfun() {
+				let n1 = parseInt(prompt('Enter First number :'));
+				let n2 = parseInt(prompt('Enter Second number :'));
+				let n3 = parseInt(prompt('Enter third number :'));
+				let min = Math.min(n1, n2, n3);
+				document.write(`Minimun of given number is ${min}`);
+			}
+			function maxfun() {
+				let n1 = parseInt(prompt('Enter First number :'));
+				let n2 = parseInt(prompt('Enter Second number :'));
+				let n3 = parseInt(prompt('Enter third number :'));
+				let max = Math.max(n1, n2, n3);
+				document.write(`Maximum number of given is ${max}`);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Enter your details :</h1>
+		Full name : <input type="text" id="fname" /> <br /><br />
+		Address :&nbsp;&nbsp;&nbsp;<textarea id="address"></textarea> <br /><br />
+		City :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+		<select id="city">
+			<option value="Ahemedabad">Ahemedabad</option>
+			<option value="surat">surat</option>
+			<option value="rajkot">rajkot</option>
+			<option value="bombay">bombay</option>
+		</select>
+
+		<br /><br />
+		Email : &nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="email" id="email" />
+
+		<br /><br />
+		mobile No : <input type="tel" id="mobileNo" /> <br /><br />
+		<button onclick="print()">Click here</button>
+		<button onclick="submit()">Submit</button>
+		<h1 id="1"></h1>
+		<h1 id="2"></h1>
+		<h1 id="3"></h1>
+		<h1 id="4"></h1>
+		<h1 id="5"></h1>
+		<script>
+			function print() {
+				let name = document.getElementById('fname').value;
+				document.getElementById('1').innerHTML = `Full name : ${name}`;
+
+				let address = document.getElementById('address').value;
+				document.getElementById('2').innerHTML = `Address : ${address}`;
+
+				let city = document.getElementById('city').value;
+				document.getElementById('3').innerHTML = `City : ${city}`;
+
+				let email = document.getElementById('email').value;
+				document.getElementById('4').innerHTML = `Email : ${email}`;
+
+				let moNo = document.getElementById('mobileNo').value;
+				document.getElementById('5').innerHTML = `Mobile No : ${moNo}`;
+			}
+			function submit() {
+				alert('Thank you for submit...');
+			}
+		</script>
+	</body>
+</html>

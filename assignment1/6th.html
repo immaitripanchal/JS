@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Count of given number in array :</h1>
+		<button onclick="count()" style="background-color: bisque">
+			<h1>Click me</h1>
+		</button>
+		<script>
+			function count() {
+				let arr = [];
+				for (let i = 0; i < 5; i++) {
+					arr[i] = parseInt(prompt(`Enter ${i + 1} Element : `));
+				}
+				let count = 0;
+				let number = parseInt(prompt('Enter which element you want to found :'));
+				for (let i = 0; i < arr.length; i++) {
+					if (arr[i] === number) {
+						count++;
+					}
+				}
+				document.write(`<h1>Element found ${count} times</h1>`);
+			}
+		</script>
+	</body>
+</html>

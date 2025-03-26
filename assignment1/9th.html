@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script>
+			function validateForm() {
+				let name = document.getElementById('fname').value;
+				let email = document.getElementById('email').value;
+				let password = document.getElementById('password').value;
+				let hasNo = /\d/;
+				if (name === '') {
+					alert('Name must be filed out :');
+					return false;
+				} else if (hasNo.test(name)) {
+					alert('Name must not control number :');
+					return false;
+				}
+				if (email === '') {
+					alert('Email must be filed out :');
+					return false;
+				} else if (email.indexOf('@') == -1 || email.indexOf('.') == -1) {
+					alert('please enter valid email address :(email must be contain @ and .)');
+					return false;
+				}
+				if (password == '') {
+					alert('password must me files out :');
+					return false;
+				} else if (password.length < 6 || password.length > 12) {
+					alert('password must be between 6 and 12 characters :');
+					return false;
+				}
+				alert('form submitted successfully :');
+			}
+		</script>
+	</head>
+
+	<body>
+		<center>
+			<h1>Registration Form :</h1>
+			<form action="">
+				First name : <input type="text" id="fname" /> <br /><br />
+				Email : <input type="email" id="email" /> <br /><br />
+				Password : <input type="password" id="password" /><br /><br />
+				<button onclick="validateForm()" value="submit"><h3>Submit</h3></button>
+			</form>
+		</center>
+	</body>
+</html>

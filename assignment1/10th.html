@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<center>
+			<h1>Registration Form :</h1>
+			<form action="">
+				<label for="name">Name :</label>
+				<input type="text" id="name" />
+				<br />
+				<span style="color: red" id="nameError"></span>
+				<br /><br />
+				<label for="email">Email :</label>
+				<input type="email" id="email" />
+				<br />
+				<span style="color: red" id="emailError"></span>
+				<br /><br />
+				<label for="password">Password :</label>
+				<input type="password" id="password" />
+				<br />
+				<span style="color: red" id="passwordError"></span>
+				<br /><br />
+				<button value="submit" onclick="formValidate()" style="background-color: brown" type="button">
+					<h3 style="color: white">Submit</h3>
+				</button>
+			</form>
+		</center>
+	</body>
+	<script>
+		function formValidate() {
+			let name = document.getElementById('name').value;
+			let email = document.getElementById('email').value;
+			let password = document.getElementById('password').value;
+
+			let hasNo = /\d/;
+			let isValid = true;
+
+			if (name === '') {
+				document.getElementById('nameError').innerHTML = `*Name required`;
+				isValid = false;
+			} else if (hasNo.test(name)) {
+				document.getElementById('nameError').innerHTML = `*Name can not contain number!!`;
+				isValid = false;
+			}
+
+			if (email === '') {
+				document.getElementById('emailError').innerHTML = `*Email required`;
+				isValid = false;
+			} else if (email.indexOf('@') == -1 || email.indexOf('.') == -1) {
+				document.getElementById('emailError').innerHTML = `*email must contain @ & .`;
+				isValid = false;
+			}
+
+			if (password == '') {
+				document.getElementById('passwordError').innerHTML = `*password required`;
+				isValid = false;
+			} else if (password.length < 6 || password.length > 12) {
+				document.getElementById('passwordError').innerHTML = `*password must be 6 to 12 character`;
+				isValid = false;
+			}
+
+			if (isValid) {
+				alert('Form submitted successfully..!!');
+			}
+		}
+	</script>
+</html>

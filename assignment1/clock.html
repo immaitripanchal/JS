@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<center>
+			<h1>Current Time And Date :</h1>
+			<script>
+				let t = new Date();
+				let date = t.getMonth() + 1 + '/' + t.getDate() + '/' + t.getFullYear();
+				let time = t.getHours() + ':' + t.getMinutes() + ':' + t.getSeconds();
+				let clock = `Date : ${date} <br> Time : ${time}`;
+				document.write(`<h1>${clock}</h1>`);
+			</script>
+		</center>
+	</body>
+</html>

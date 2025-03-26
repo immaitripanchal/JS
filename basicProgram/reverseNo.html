@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>reverse number</title>
+	</head>
+	<body>
+		<script>
+			let number = parseInt(prompt("Enter number to get it's reverse :"));
+			let rem = 0,
+				reverse = 0;
+			while (number > 0) {
+				rem = number % 10;
+				number = parseInt(number / 10);
+				reverse = reverse * 10 + rem;
+			}
+			document.write(`<h1>Reverse number is  ${reverse} </h1>`);
+		</script>
+	</body>
+</html>

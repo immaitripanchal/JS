@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				margin-top: 4%;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<label for="1">Text 1:</label>
+			<input type="text" id="1" />
+			<br /><br />
+			<label for="2">Text 2:</label>
+			<input type="text" id="2" />
+			<br /><br />
+			<input type="button" onclick="compare()" value="compare" />
+		</center>
+	</body>
+	<script>
+		function compare() {
+			let text1 = document.getElementById('1').value;
+			let text2 = document.getElementById('2').value;
+			if (text1 === text2) {
+				alert('Both the string are same :');
+			} else {
+				alert('both the string are not same :');
+			}
+		}
+	</script>
+</html>
