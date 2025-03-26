@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('button').click(function () {
+					$('.h').hide();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Use of id selector :</h1>
+		<p class="h">this line will hide</p>
+		<p class="h">this line will also hide</p>
+		<p>this line will not hide</p>
+		<button>Click me</button>
+	</body>
+</html>

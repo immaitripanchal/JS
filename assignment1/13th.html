@@ -6,4 +6,15 @@
 		<title>Document</title>
 	</head>
 	<body></body>
+	<script>
+		let currentDate = new Date();
+		let dob = new Date(prompt('Enter your date of birth (yyyy-mm-dd):'));
+		if (dob > currentDate) {
+			document.write('<h1>Date of birth can not be in future :</h1>');
+		} else if (dob <= currentDate) {
+			document.write('<h1>Correct date of birth :</h1>');
+		} else {
+			document.write('<h1>Incorrect date of birth</h1>');
+		}
+	</script>
 </html>

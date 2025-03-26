@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mobiles>
+
+<mobile>
+<company>Apple</company>
+<model>i phone 12</model>
+<price>50,00</price>
+</mobile>
+
+<mobile>
+<company>samsung</company>
+<model>galaxy s23 ultra</model>
+<price>12,000</price>
+</mobile>
+
+<mobile>
+<company>google</company>
+<model>pixal 8 pro</model>
+<price>13000</price>
+</mobile>
+
+</mobiles>

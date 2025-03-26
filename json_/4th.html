@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1 id="array"></h1>
+	</body>
+	<script>
+		const data = [
+			{
+				title: 'jquery step by step',
+				author: 'maitri',
+				page: 123,
+			},
+			{
+				title: 'dbms',
+				author: 'tirth',
+				page: 190,
+			},
+		];
+		let object = JSON.stringify(data);
+		document.getElementById('array').innerHTML = object;
+	</script>
+</html>

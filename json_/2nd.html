@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1 id="obj"></h1>
+	</body>
+	<script>
+		const data = {
+			Employee: {
+				fullname: 'suhit patel',
+				address: 'maninagar',
+				city: 'ahemedabad',
+			},
+			Experience: {
+				expertise: 'java developer',
+				doj: '12/01/2019',
+			},
+		};
+		let object = JSON.stringify(data);
+		document.getElementById('obj').innerHTML = `Fullname : ${data.Employee.fullname} <br>
+                                                Address : ${data.Employee.address} <br>
+                                                City :${data.Employee.city}`;
+	</script>
+</html>

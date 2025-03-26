@@ -8,12 +8,17 @@
 	<body>
 		<center>
 			<h1>Current Time And Date :</h1>
+			<h2 id="clock"></h2>
 			<script>
-				let t = new Date();
-				let date = t.getMonth() + 1 + '/' + t.getDate() + '/' + t.getFullYear();
-				let time = t.getHours() + ':' + t.getMinutes() + ':' + t.getSeconds();
-				let clock = `Date : ${date} <br> Time : ${time}`;
-				document.write(`<h1>${clock}</h1>`);
+				function clock() {
+					let clockElement = document.getElementById('clock');
+					let t = new Date();
+					let date = t.getMonth() + 1 + '/' + t.getDate() + '/' + t.getFullYear();
+					let time = t.getHours() + ':' + t.getMinutes() + ':' + t.getSeconds();
+					let clock = `Date : ${date}  Time : ${time}`;
+					clockElement.textContent = clock;
+				}
+				setInterval(clock, 1000);
 			</script>
 		</center>
 	</body>

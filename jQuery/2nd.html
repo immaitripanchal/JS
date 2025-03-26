@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('button').click(function () {
+					$('p:first').hide();
+					$('p:last').hide();
+					$('p:eq(1)').css('background-color', 'red');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Show use of first,last,eq selector</h1>
+		<p>first line</p>
+		<p>second line</p>
+		<p>third line</p>
+		<p>fourth line</p>
+		<p>fifth line</p>
+		<p>sixth line</p>
+		<button>Click me!</button>
+	</body>
+</html>

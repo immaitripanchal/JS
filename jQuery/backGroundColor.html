@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('#1').change(function () {
+					let color = document.getElementById('1').value;
+					$('body').css('background-color', color);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Change background color :</h1>
+		<select id="1">
+			<option value="blue">Blue</option>
+			<option value="red">red</option>
+			<option value="black">black</option>
+			<option value="silver">silver</option>
+			<option value="yellow">yellow</option>
+			<option value="green">green</option>
+			<option value="teal">teal</option>
+		</select>
+	</body>
+</html>

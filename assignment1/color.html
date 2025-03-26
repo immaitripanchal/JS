@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Change Text and back-ground color :</h1>
+		<label for="fgcolor">Select foreground color (Text color) :</label>
+		<input type="color" id="fgcolor" onchange="change()" />
+		<br /><br />
+		<label for="bgcolor">Select back-ground color :</label>
+		<input type="color" id="bgcolor" onchange="change()" />
+	</body>
+	<script>
+		function change() {
+			let fgcolor = document.getElementById('fgcolor').value;
+			let bgcolor = document.getElementById('bgcolor').value;
+			document.body.style.color = fgcolor;
+			document.body.style.backgroundColor = bgcolor;
+		}
+	</script>
+</html>
